@@ -8,37 +8,76 @@
     <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/popper.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
-    <link rel="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/css/w3.css">
     <link rel="stylesheet" href="lib/css/font-awesome.min.css">
-    <title>Alteon Project</title>
+	<title>Alteon Project</title>
 	<style>
-	body, html	{
-				height: 100%;
-	}
-	h1, p		{
-				padding: 10px;
-	}
-	.bg			{
-				background-image: url("lib/img/b5.jpg");
-				height: 100%; 
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-	}
-	.blur 		{
-				filter: blur(1px);
-	}
+		.bg-image	{
+  					background-image: url("lib/img/b2.jpg");
+					background-color: #cccccc;
+					height: 500px;
+					background-position: center;
+					background-repeat: repeat-y;
+					background-size: cover;
+					position: relative;
+					filter:blur(8px)
+		}
+		.my-margin	{
+					padding: 40px;
+		}
+		.my-font-s	{
+					padding: 20px;
+					text-align: justify;
+					font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+		.my-font-p	{
+					padding: 40px;
+					text-align: center;
+					font-family: "Comic Sans MS", cursive, sans-serif;
+		}
 	</style>
 </head>
 <body>
-	<div class="bg w3-animate-zoom">
-		<div class="w3-header w3-left">
-			<font color="white">
-				<h1>Alteon Project</h1>
-				<p>@_rraihan01</p>
-			</font>
-		</div>
+	<div class="w3-sidebar w3-bar-block w3-card" style="display:none" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close</button>
+			<a href="#" class="w3-bar-item w3-button">Pascal</a>
+			<a href="#" class="w3-bar-item w3-button">Python</a>
+			<a href="#" class="w3-bar-item w3-button">Node JS</a>
+			<a href="#" class="w3-bar-item w3-button">JavaScript</a>
 	</div>
+	<!--MAIN--> 
+	<div id="main">
+		<div class="w3-teal">
+				<div class="w3-container">
+					<div class="w3-center w3-animate-zoom w3-xlarge">Alteon Project</div>
+					<div class="w3-center w3-animate-zoom">@_rraihan01</div>
+				</div>
+				<button id="openNav" class="w3-card w3-button" onclick="w3_open()">Menu</button>
+				<br>
+		</div>
+		<div class="w3-container my-margin">
+			<div class="w3-text-black my-font-p">
+				<h1> WWWW</h1>
+			</div>
+			<div class="w3-text-black my-font-s">	
+				<p>TEXT ARTIKEL</p>
+			</div>
+		</div>	  
+	</div>
+	<!--SCRIPT-->
+	<script>
+		function w3_open() {
+			document.getElementById("main").style.marginLeft = "25%";
+			document.getElementById("mySidebar").style.width = "25%";
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("openNav").style.display = 'none';
+		}
+		function w3_close() {
+			document.getElementById("main").style.marginLeft = "0%";
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("openNav").style.display = "inline-block";
+		}
+	</script>
 </body>
 </html>
