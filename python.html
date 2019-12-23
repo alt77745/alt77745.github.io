@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/js/w3.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/w3.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+	<title>Python</title>
+	<style>
+		body		{
+					
+		}
+		<!--MINE-->
+		.my-margin	{
+					padding: 40px;
+		}
+		.my-font-s	{
+					padding: 20px;
+					text-align: justify;
+					font-size: 15px;
+		}
+		.my-font-p	{
+					padding: 20px;
+					text-align: center;
+					font-size: 30px;
+		}
+		.my-font-h	{
+					padding: 10px;
+					text-align: center;
+					font-size: 50px;
+		}
+		<!--BUTTON-->
+		.bar1, .bar2, .bar3 {
+							width: 15px;
+							height: 10px;
+							background-color: #333;
+							margin: 4px 0;
+							transition: 0.4s;
+		}
+		.change .bar1 		{
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+ 							transform: rotate(-45deg) translate(-9px, 6px);
+		}
+		.change .bar2 		{
+							opacity: 0;
+		}
+		.change .bar3 		{
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
+		}
+	</style>
+</head>
+<body>
+	<font face="Consolas">
+	<div class="w3-sidebar w3-bar-block w3-card" style="display:none" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()" style="text-align: right;"><b>&#8594;</b></button>
+			<a href="#" class="w3-bar-item w3-button">C#</a>
+			<a href="#" class="w3-bar-item w3-button">Visual Basic</a>
+			<a href="#" class="w3-bar-item w3-button">Pascal</a>
+			<a href="#" class="w3-bar-item w3-button">Node JS</a>
+			<a href="#" class="w3-bar-item w3-button">JavaScript</a>
+	</div>
+	<!--MAIN--> 
+	<div id="main">
+		<div class="w3-grey">
+				<div class="w3-container w3-text-white">
+						<br>
+						<button id="openNav" class="w3-card w3-button" onclick="w3_open();">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</button>
+						<div class="w3-center w3-animate-left my-font-h">Python</div>
+				</div>
+		</div>
+		<div class="w3-container my-margin w3-animate-left">
+			<br>
+			<br>
+			<div class="w3-text-black my-font-p">
+				<div>List</div>
+			</div>
+			<div class="w3-text-black my-font-s jumbotron" style="padding: 20px;">	
+				<a href="#" style="padding: 10px;">1. </a> <br>
+				<a href="#" style="padding: 10px;">2. </a> <br>
+				<a href="#" style="padding: 10px;">3. </a> <br>
+				<a href="#" style="padding: 10px;">4. </a> <br>
+				<a href="#" style="padding: 10px;">5. </a> <br>
+			</div>
+		</div>	  
+	</div>
+	<!--SCRIPT-->
+	<script>
+		function w3_open() {
+			document.getElementById("main").style.marginLeft = "25%";
+			document.getElementById("mySidebar").style.width = "25%";
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("openNav").style.display = 'none';
+		}
+		function w3_close() {
+			document.getElementById("main").style.marginLeft = "0%";
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("openNav").style.display = "inline-block";
+		}
+	</script>
+	</font>
+</body>
+</html>
